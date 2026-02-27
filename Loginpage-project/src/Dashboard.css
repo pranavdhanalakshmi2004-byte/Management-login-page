@@ -1,0 +1,326 @@
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6f9;
+}
+
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 260px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("./assets/side.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sidebar-logo img {
+  width: 250px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.sidebar-logo h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.sidebar li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.sidebar li:hover {
+  background-color: #00bcd4;
+  padding-left: 20px;
+}
+
+.sidebar li.active {
+  background-color: #00bcd4;
+}
+
+.sidebar button {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4d4d;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #e60000;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 70px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+}
+
+.navbar input {
+  width: 260px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #00bcd4;
+  background-color: transparent;
+  outline: none;
+  color: #ddd;
+}
+
+.navbar input:focus {
+  border-color: #00bcd4;
+}
+
+.nav-right {
+  position: relative;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 55px;
+  background:black;
+  width: 180px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px #00bcd4;
+  Color:white
+}
+
+.dropdown p {
+  margin: 8px 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown p:hover {
+  color: #00bcd4;
+}
+
+.logout-btn {
+  color: red;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: black;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px #00bcd4;
+  transition: all 0.3s ease;
+  color: #00bcd4;
+  border-color: #00bcd4;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+  background:black;
+  padding: 30px;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.profile-card h2 {
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+  background: black;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px #00bcd4;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  
+  
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  background-color: black;
+
+}
+
+th {
+  background-color: #00bcd4;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #eaf9fc;
+}
+
+
+/* =========================
+   CREATE USER FORM
+========================= */
+
+.form-card {
+  background: black;
+  padding: 30px;
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px #00bcd4;
+  color:#00bcd4;
+}
+
+.form-card input,
+.form-card select {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+  border-color: #00bcd4;
+  background-color: transparent;
+  color: white;
+}
+
+.form-card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00bcd4;
+  border: none;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-card button:hover {
+  background-color: #0097a7;
+}
+.content-area{
+    background-color: rgb(0, 0, 0);
+}

@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  background-image:url(./assets/bg.jpg);
+  background-size: cover;
+}
+
+.login-box {
+  background-color:rgba(44, 44, 44, 0.267);
+  color: whitesmoke;
+  border-radius: 20px;
+  border: 2px;
+  padding: 60px;
+  width: 320px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.input {
+  width: 95%;
+  padding: 8px;
+  margin: 8px 0;
+  background-color:transparent;
+  color: white;
+
+}
+
+.btn {
+  width: 100%;
+  padding: 8px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  cursor: pointer;
+   margin: 25px 0;
+   height: 40px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+.input1{
+    padding: 8px;
+    width: 300px;
+     margin: 8px 0;
+     background-color: transparent;
+     color: white;
+     
+}
+
+.login-box h2{
+  color:#00bcd4;
+
+}
+.selectfield select option{
+  background-color:black;
+  
+}
+.selectfield select{
+  color: black;
+}
+.selectfield{
+  /* padding: 6px; */
+  width:340px;
+  background-color: black;
+  
+
+}
+.login-box img{
+  width: 200px;
+}
+.select:hover{
+  background-color: black;
+  color: black;
+}
