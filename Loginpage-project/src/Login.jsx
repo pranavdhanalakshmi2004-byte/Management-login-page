@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import logo from "./assets/plogo.jpg";
 
 const Login = () => {
@@ -11,6 +13,18 @@ const Login = () => {
   const validationSchema = Yup.object({
     name: isSignup
       ? Yup.string().required("Name is required")
+      : Yup.string(),
+
+    // age: isSignup
+    //   ? Yup.number()
+    //       .required("Age is required")
+    //       .min(18, "Must be 18+")
+    //   : Yup.number(),
+
+    phone: isSignup
+      ? Yup.string()
+          .matches(/^[0-9]{10}$/, "Enter valid 10-digit number")
+          .required("Phone number is required")
       : Yup.string(),
 
     email: Yup.string()
@@ -37,18 +51,19 @@ const Login = () => {
       JSON.parse(localStorage.getItem("users")) || [];
 
     if (isSignup) {
-      // Check if email already exists
       const emailExists = existingUsers.find(
         (user) => user.email === values.email
       );
 
       if (emailExists) {
-        alert("Email already registered");
+        toast.error("Email already registered");
         return;
       }
 
       const newUser = {
         name: values.name,
+        age: values.age,
+        phone: values.phone,
         email: values.email,
         password: values.password,
         role: values.role,
@@ -57,7 +72,7 @@ const Login = () => {
       const updatedUsers = [...existingUsers, newUser];
       localStorage.setItem("users", JSON.stringify(updatedUsers));
 
-      alert("Signup Successful! Please Login.");
+      toast.success("Signup Successful! Please Login.");
       setIsSignup(false);
       resetForm();
       return;
@@ -76,14 +91,16 @@ const Login = () => {
         JSON.stringify(foundUser)
       );
 
-      navigate("/dashboard");
+      toast.success("Login Successful");
+      setTimeout(() => navigate("/dashboard"), 1000);
     } else {
-      alert("Invalid Email or Password");
+      toast.error("Invalid Email or Password");
     }
   };
 
   return (
     <div className="login-container">
+      <ToastContainer position="top-right" autoClose={2000} />
       <div className="login-box">
 
         <img src={logo} alt="logo" className="img" />
@@ -91,6 +108,8 @@ const Login = () => {
         <Formik
           initialValues={{
             name: "",
+            age: "",
+            phone: "",
             email: "",
             password: "",
             confirmPassword: "",
@@ -111,7 +130,22 @@ const Login = () => {
                 />
                 <ErrorMessage name="name" component="div" className="error" />
 
-            
+                {/* <Field
+                  type="number"
+                  name="age"
+                  placeholder="Enter Age"
+                  className="input"
+                />
+                <ErrorMessage name="age" component="div" className="error" /> */}
+
+                <Field
+                  type="text"
+                  name="phone"
+                  placeholder="Enter Phone Number"
+                  className="input"
+                />
+                <ErrorMessage name="phone" component="div" className="error" />
+
                 <Field as="select" name="role" className="input">
                   <option value="">Select Role</option>
                   <option value="admin">Admin</option>

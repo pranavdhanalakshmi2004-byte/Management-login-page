@@ -245,6 +245,7 @@
   border-radius: 12px;
   box-shadow: 0 5px 15px #00bcd4;
   color: white;
+  
 }
 
 table {
@@ -324,3 +325,272 @@ tr:hover {
 .content-area{
     background-color: rgb(0, 0, 0);
 }
+/* =========================
+   FIX CARD TEXT COLOR ISSUE
+========================= */
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00bcd4;   /* was dark before */
+}
+
+
+/* =========================
+   FIX TABLE DARK THEME ISSUE
+========================= */
+
+tr:nth-child(even) {
+  background-color: #111 !important;
+}
+
+tr:nth-child(odd) {
+  background-color: #000 !important;
+}
+
+tr:hover {
+  background-color: #002f33 !important;
+}
+
+td {
+  color: #ffffff;
+}
+
+
+/* =========================
+   FIX DROPDOWN TEXT COLOR TYPO
+========================= */
+
+.dropdown {
+  color: white;   /* you had Color:white (capital C) */
+}
+
+
+/* =========================
+   IMPROVED PROFILE CARD
+========================= */
+
+.profile-card {
+  background: black;
+  color: white;
+  box-shadow: 0 5px 15px #00bcd4;
+  border: 1px solid #00bcd4;
+}
+
+
+/* =========================
+   FIX SELECT DROPDOWN DARK
+========================= */
+
+select {
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid #00bcd4 !important;
+}
+
+select option {
+  background-color: black !important;
+  color: white !important;
+}
+
+
+/* =========================
+   PROFESSIONAL TASK SECTION
+========================= */
+
+.task-section {
+  margin-top: 20px;
+}
+
+.task-card {
+  background: black;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px #00bcd4;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.task-card input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #00bcd4;
+  background: transparent;
+  color: white;
+}
+
+.task-card input:focus {
+  outline: none;
+  border-color: #00bcd4;
+}
+
+.task-card button {
+  padding: 10px 18px;
+  background-color: #00bcd4;
+  border: none;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-card button:hover {
+  background-color: #0097a7;
+}
+
+
+/* =========================
+   TASK TABLE STYLE
+========================= */
+
+.task-table {
+  background: black;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px #00bcd4;
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 5px;
+  border-bottom: 1px solid #00bcd4;
+  color: white;
+}
+
+.task-row:last-child {
+  border-bottom: none;
+}
+
+.task-row span:last-child {
+  color: #00bcd4;
+  font-weight: 500;
+}
+
+
+/* =========================
+   SMOOTH CARD HOVER (THEME MATCHED)
+========================= */
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px #00bcd4;
+}
+
+
+/* =========================
+   IMPROVE INPUT STYLING GLOBALLY
+========================= */
+
+input {
+  background: transparent;
+  color: white;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+
+/* =========================
+   FIX CONTENT AREA DOUBLE BG
+========================= */
+
+.content-area {
+  background-color: black;
+}
+.ad{
+    margin-left: auto; 
+  padding: 8px 16px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.table-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.field{
+  background-color:transparent;
+}
+
+.p-fluid{
+  background-color: black;
+}
+.custom-dialog .p-dialog-header {
+  background-color: black; 
+  color: white;               
+  font-weight: bold;
+}
+
+.custom-dialog .p-dialog-content {
+  background-color:black; 
+}
+
+.sub{
+  background-color: #00bcd4;
+  color: whitesmoke;
+  margin-top: 20px;
+}
+.rr{
+  background-color: black;
+}
+/* Change the input box */
+.custom-dropdown .p-dropdown-label {
+  background-color: #f0f4f8; /* Background inside input */
+  color: #333;               /* Text color */
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Side-by-side dialog layout */
+.row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Half width fields */
+.field.half {
+  flex: 1;
+}
+
+/* Full width fields (like Address) */
+.field.full {
+  flex: 1 1 100%;
+}
+
+/* Label styling */
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  color: #00bcd4;
+  font-weight: 500;
+}
+
+/* Dropdown menu options */
+.custom-dropdown .p-dropdown-items {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Input & Dropdown styling (already compatible with your theme) */
+.field input,
+.field select,
+.custom-dropdown .p-dropdown-label {
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid #00bcd4 !important;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+/* Submit button already defined in .sub */

@@ -1,86 +1,96 @@
 body {
   margin: 0;
-  background-position: center;
-  font-family: Arial, sans-serif;
-  
-}
-
-.login-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  background-image:url(./assets/bg.jpg);
+  font-family: 'Segoe UI', sans-serif;
+  background: url(./assets/bg.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .login-box {
-  background-color:rgba(44, 44, 44, 0.267);
-  color: whitesmoke;
-  border-radius: 20px;
-  border: 2px;
+  background: rgba(0, 0, 0, 0.7); /* dark overlay */
   padding: 60px;
-  width: 320px;
-  border-radius: 10px;
+  width: 500px;
+  border-radius: 20px;
   text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  color: white;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 188, 212, 0.5);
+}
+
+.login-box img {
+  width: 200px;
+  margin-bottom: 25px;
+}
+
+.login-box h2 {
+  color: #00bcd4;
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-size: 28px;
 }
 
 .input {
   width: 95%;
-  padding: 8px;
-  margin: 8px 0;
-  background-color:transparent;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 1px solid #00bcd4;
+  background-color: rgba(0,0,0,0.3);
   color: white;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
 
+.input:focus {
+  border-color: #00e5ff;
+  box-shadow: 0 0 8px #00bcd4;
 }
 
 .btn {
-  width: 100%;
-  padding: 8px;
-  background: #00bcd4;
-  color: white;
+  width: 95%;
+  padding: 14px;
+  margin-top: 30px;
   border: none;
+  border-radius: 12px;
+  background: #00bcd4;
+  color: black;
+  font-weight: 600;
   cursor: pointer;
-   margin: 25px 0;
-   height: 40px;
+  transition: all 0.3s ease;
 }
 
-.error {
-  color: red;
-  font-size: 12px;
-}
-.input1{
-    padding: 8px;
-    width: 300px;
-     margin: 8px 0;
-     background-color: transparent;
-     color: white;
-     
+.btn:hover {
+  background: #0097a7;
 }
 
-.login-box h2{
-  color:#00bcd4;
+.forgot-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
 
+.forgot-text .link {
+  color: #00bcd4;
+  cursor: pointer;
+  text-decoration: underline;
 }
-.selectfield select option{
-  background-color:black;
-  
-}
-.selectfield select{
-  color: black;
-}
-.selectfield{
-  /* padding: 6px; */
-  width:340px;
-  background-color: black;
-  
 
-}
-.login-box img{
-  width: 200px;
-}
-.select:hover{
-  background-color: black;
-  color: black;
+@media screen and (max-width: 500px) {
+  .login-box {
+    width: 90%;
+    padding: 40px;
+  }
+
+  .input,
+  .btn {
+    width: 100%;
+  }
 }
